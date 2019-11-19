@@ -10,8 +10,8 @@ To run all style checkers and tests use commands:
 
 `pytest`
 
-`flake8 .`
+`flake8 convert`
 
 `pylint convert`
 
-`mypy .`
+`mypy convert.py`

@@ -5,6 +5,6 @@ install:
   - pip install -r requirements.txt
 script:
   - pytest
-  - flake8 .
+  - flake8 convert
   - pylint convert
-  - mypy .
+  - mypy convert.py
