@@ -1,4 +1,6 @@
-def utf_len(s: bytes) -> int:
+"""len module"""
 
 
-    return 0
+def utf_len(string: bytes) -> int:
+    """len function"""
+    return len(str(string, 'utf-8'))
