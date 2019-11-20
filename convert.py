@@ -1,4 +1,10 @@
-def utf_len(s: bytes) -> int:
+"""
+function utf_len which decode string and get its length
+"""
+def utf_len(encoded_string: bytes) -> int:
+    """
 
-
-    return 0
+    :param encoded_string: encoded string
+    :return: length of decoded string
+    """
+    return len(encoded_string.decode())
