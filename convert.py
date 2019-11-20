@@ -18,4 +18,3 @@ def utf_len(strng: bytes) -> int:
         elif (byte_in_line & 0b01000000) == 0b1000000:
             count_letter += 1
     return count_letter
-
