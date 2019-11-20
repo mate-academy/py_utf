@@ -1,4 +1,2 @@
 def utf_len(s: bytes) -> int:
-
-
-    return 0
+    return len(str(s, 'utf-8'))
