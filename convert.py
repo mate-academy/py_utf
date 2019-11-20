@@ -2,8 +2,6 @@
 Module
 '''
 
-LENGTH_BYTE_IN_STR = 10
-
 
 def utf_len(strng: bytes) -> int:
     '''
@@ -12,14 +10,12 @@ def utf_len(strng: bytes) -> int:
     :param strng:
     :return:
     '''
+
     count_letter = 0
     for byte_in_line in strng:
-        # length of the string( byte which is represented in binary form)
-        lngth_binr_byte = len(str(bin(byte_in_line)))
-        if lngth_binr_byte != LENGTH_BYTE_IN_STR:
+        if byte_in_line & 0b10000000 == 0b0:
             count_letter += 1
-        else:
-            bit = str(bin(byte_in_line)[3])
-            if bit == '1':
-                count_letter += 1
+        elif (byte_in_line & 0b01000000) == 0b1000000:
+            count_letter += 1
     return count_letter
+
